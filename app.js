@@ -9,7 +9,7 @@ app.use(cors())
 
 //ROUTES
 app.get("/", (req, res) => {
-    res.send("Welcome to my Budget App")
+    res.send(`Welcome to the Budget App! For Docs, please visit this repo <a href="https://github.com/elizabethbright721/budget-app-backend">here</a>.`)
 });
 
 app.use("/transactions" , transactionController)
