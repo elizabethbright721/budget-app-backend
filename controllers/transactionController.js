@@ -18,13 +18,13 @@ transactions.get('/:index', (req, res) => {
 })
 
 //CREATE
-transactions.post("/" , transactionValidator, (req, res) => {
+transactions.post("/" , (req, res) => {
     transactionsArr.push(req.body);
     res.status(201).json(transactionsArr[transactionsArr.length -1])
 })
 
 //UPDATE
-transactions.put("/:index", transactionValidator, (req, res) => {
+transactions.put("/:index", (req, res) => {
     const { index } = req.params;
     if(transactionsArr[index]) {
         transactionsArr[index] = req.body
