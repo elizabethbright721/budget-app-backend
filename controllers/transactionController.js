@@ -8,7 +8,7 @@ transactions.get("/" , (req, res) => {
 })
 
 //SHOW - GET ON ID
-transactions.get('/:idex', (req, res) => {
+transactions.get('/:index', (req, res) => {
     const {index} = req.params;
     if(transactionsArr[index]){
         res.json(transactionsArr[index]);
